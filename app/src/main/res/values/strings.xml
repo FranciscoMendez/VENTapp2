@@ -9,4 +9,9 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_registrarse">Registrarse</string>
     <string name="title_activity_propiedad_mapa">Map</string>
+    <string name="msj_error_clienrest">Error al conusltar servicio web, posibles problemas de conexión, intente más adelante.</string>
+    <string name="msj_error_clienrest_formato">Error en interpretación de resultado, posibles problemas con el servidor.</string>
+    <string name="msj_confirmacion">Mensaje de confirmación</string>
+    <string name="msj_pregunta_salir">¿Esta seguro que desea salir de la aplicación?</string>
+
 </resources>

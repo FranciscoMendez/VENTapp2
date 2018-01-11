@@ -97,6 +97,9 @@ public class Menu extends AppCompatActivity
         }else if (id == R.id.nav_buscar){
             Intent intent = new Intent(getApplicationContext(), Buscar.class);
             startActivity(intent);
+        }else if (id == R.id.nav_publicaciones){
+            Intent intent = new Intent(getApplicationContext(), FiltradoPropiedad.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

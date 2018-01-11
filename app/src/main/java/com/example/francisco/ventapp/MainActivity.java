@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         try {
 
-            URL url = new URL("http://172.20.10.3:8080/Ventapp/ventapp/login/user?email="+correo+"&pass="+clave);
+            URL url = new URL("http://192.168.0.105:8080/Ventapp/ventapp/login/user?email="+correo+"&pass="+clave);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
             conn.setRequestProperty("Accept", "application/json");

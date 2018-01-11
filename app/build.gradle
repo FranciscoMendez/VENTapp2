@@ -41,6 +41,8 @@ dependencies {
     compile 'com.wang.avi:library:2.1.3'
     compile 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
 
+    compile 'com.google.code.gson:gson:2.8.1'       //Dependecia agregada para soportar GSON
+
 
 
 }
