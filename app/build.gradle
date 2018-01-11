@@ -44,5 +44,4 @@ dependencies {
     compile 'com.google.code.gson:gson:2.8.1'       //Dependecia agregada para soportar GSON
 
 
-
 }

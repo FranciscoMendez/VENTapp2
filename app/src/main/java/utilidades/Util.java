@@ -10,7 +10,7 @@ import android.widget.Toast;
 public class Util {
 
     //URL del Sitio Web primario de los WS para la aplicacion
-    public static final String URL_SRV = "http://192.168.0.105.224:8080/Ventapp/ventapp/";
+    public static final String URL_SRV = "http://192.168.0.105:8080/Ventapp/ventapp/";
 
     /**
      * Permite mostrar un mensaje Toast en pantalla,

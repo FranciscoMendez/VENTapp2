@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,7 +39,7 @@ public class Propiedades extends AppCompatActivity implements OnTaskCompleted {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                llamarCrearCategoria();
+                ;
             }
         });
     }
@@ -62,8 +63,11 @@ public class Propiedades extends AppCompatActivity implements OnTaskCompleted {
             case SOLICITUD_PROPIEDAD:
                 if(result!=null){
                     try {
-                        Categoria res =  ClienteRest.getResult(result, Categoria.class);
-                        Util.showMensaje(this, res.toString());
+                        Propiedad res =  ClienteRest.getResult(result, Propiedad.class);
+                        Intent intent = new Intent(getApplicationContext(), DetallePropiedad.class);
+                        intent.putExtra("pro",(Serializable) res);
+                        startActivity(intent);
+                       // Util.showMensaje(this, res.toString());
                     }catch (Exception e){
                         Log.i("Propiedades", "Error en carga de categoria por ID", e);
                         Util.showMensaje(this, R.string.msj_error_clienrest_formato);
@@ -107,7 +111,7 @@ public class Propiedades extends AppCompatActivity implements OnTaskCompleted {
     /**
      * Realiza la llamada al WS para consultar el listado de Categorias
      */
-    protected void consultaListadoPropiedades() {
+   /* protected void consultaListadoPropiedades() {
         try {
             String URL = Util.URL_SRV + "propiedad/categorias";
             ClienteRest clienteRest = new ClienteRest(this);
@@ -116,14 +120,14 @@ public class Propiedades extends AppCompatActivity implements OnTaskCompleted {
             Util.showMensaje(this, R.string.msj_error_clienrest);
             e.printStackTrace();
         }
-    }
+    }*/
 
     /**
-     * Realiza la llamada al WS para consultar el listado de Categorias
+     * Realiza la llamada al WS para consultar la Propiedad
      */
     protected void consultaPropiedad(int id) {
         try {
-            String URL = Util.URL_SRV + "propiedad/categoriaid";
+            String URL = Util.URL_SRV + "propiedad/propiedadid";
             ClienteRest clienteRest = new ClienteRest(this);
             clienteRest.doGet(URL, "?id="+id, SOLICITUD_PROPIEDAD, true);
         }catch(Exception e){
@@ -141,21 +145,17 @@ public class Propiedades extends AppCompatActivity implements OnTaskCompleted {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position,
                                     long id) {
-               // mostrarCategoria(position);
+                mostrarPropiedad(position);
             }
         });
     }
 
-    /*private void mostrarCategoria(int position){
-        Categoria cat = categorias.getItem(position);
-        consultaCategoria(cat.getCodigo());
-    }*/
-
-    private void llamarCrearCategoria(){
-        //Intent intent = new Intent(this, CategoriaActivity.class);
-        //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);  //cierra cola de actividades
-        // startActivity(intent);
+    private void mostrarPropiedad(int position){
+        Propiedad cat = propiedades.getItem(position);
+        consultaPropiedad(cat.getCodigo());
     }
+
+
 
     public void importarInformacion() {
         Intent startingIntent = getIntent();

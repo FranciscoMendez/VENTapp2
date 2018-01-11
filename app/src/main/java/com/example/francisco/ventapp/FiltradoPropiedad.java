@@ -84,7 +84,7 @@ public class FiltradoPropiedad extends Activity implements View.OnClickListener,
     }
 
     /**
-     * Realiza la llamada al WS para consultar el listado de Categorias
+     * Realiza la llamada al WS para consultar el listado de Propiedades
      */
     protected void consultaListadoPropiedades() {
         try {

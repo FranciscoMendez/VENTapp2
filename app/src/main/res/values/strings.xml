@@ -13,5 +13,10 @@
     <string name="msj_error_clienrest_formato">Error en interpretación de resultado, posibles problemas con el servidor.</string>
     <string name="msj_confirmacion">Mensaje de confirmación</string>
     <string name="msj_pregunta_salir">¿Esta seguro que desea salir de la aplicación?</string>
+    <string name="title_activity_propiedades">Propiedades</string>
+    <string name="title_activity_sectores">Sectores</string>
+    <string name="title_activity_filtrado_propiedad">FiltradoPropiedad</string>
+    <string name="title_activity_categorias">Categorias</string>
+    <string name="title_activity_detalle_propiedad">DetallePropiedad</string>
 
 </resources>
