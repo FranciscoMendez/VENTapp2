@@ -69,7 +69,7 @@ public class FiltradoPropiedad extends Activity implements View.OnClickListener,
         switch (v.getId()){
             case R.id.btnCategoria :
                 Intent intent = new Intent(this, Categorias.class);
-                startActivity(intent);;
+                startActivity(intent);
                 break;
             case R.id.btnSectores :
                 Intent inten = new Intent(this, Sectores.class);
