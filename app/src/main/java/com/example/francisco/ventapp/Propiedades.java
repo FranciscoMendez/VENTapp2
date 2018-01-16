@@ -39,7 +39,6 @@ public class Propiedades extends AppCompatActivity implements OnTaskCompleted {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ;
             }
         });
     }
